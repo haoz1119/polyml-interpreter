@@ -1,5 +1,9 @@
 # PolyML
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Haskell](https://img.shields.io/badge/Haskell-5D4F85?logo=haskell&logoColor=white)](https://www.haskell.org/)
+[![Cabal](https://img.shields.io/badge/Built%20with-Cabal-5D4F85)](https://www.haskell.org/cabal/)
+
 A statically-typed functional programming language interpreter featuring Hindley-Milner type inference, pattern matching, and first-class functions. Implemented in Haskell.
 
 ## Overview
@@ -90,6 +94,25 @@ The interpreter implements a complete language processing pipeline:
 Source Code → Lexer → Parser → Type Inference → Evaluator → Result
 ```
 
+### Project Structure
+
+```
+polyml-interpreter/
+├── src/
+│   ├── Main.hs         # REPL and CLI entry point
+│   ├── Lexer.hs        # Tokenization and lexical analysis
+│   ├── Parser.hs       # Recursive descent parser, builds AST
+│   ├── Syntax.hs       # Abstract Syntax Tree definitions
+│   ├── Type.hs         # Type system representation
+│   ├── Infer.hs        # Hindley-Milner type inference (Algorithm W)
+│   ├── Eval.hs         # Expression evaluation and runtime
+│   └── Pretty.hs       # Pretty-printing for types and expressions
+├── test.ml             # Comprehensive example programs
+├── polyml.cabal        # Build configuration and dependencies
+├── LICENSE             # MIT License
+└── README.md           # Project documentation
+```
+
 ### Core Components
 
 | Module | Purpose |
@@ -147,8 +170,8 @@ The type system supports:
 ### Installation
 
 ```bash
-git clone https://github.com/haozhou1919/poly-lang.git
-cd poly-lang
+git clone https://github.com/haoz1119/polyml-interpreter.git
+cd polyml-interpreter
 cabal install
 ```
 
